@@ -1,0 +1,65 @@
+Started GET "/vite-dev/assets/application-BBWHWKGI.css" for 127.0.0.1 at 2025-08-12 13:02:25 -0400
+Started GET "/vite-dev/assets/inertia-DnazVp0g.css" for 127.0.0.1 at 2025-08-12 13:02:25 -0400
+Started GET "/vite-dev/assets/inertia-gxmthHQg.js" for 127.0.0.1 at 2025-08-12 13:02:25 -0400
+Started GET "/vite-dev/assets/application-DBfCPIOZ.js" for 127.0.0.1 at 2025-08-12 13:02:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/vite-dev/assets/application-BBWHWKGI.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vite-dev/assets/inertia-gxmthHQg.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vite-dev/assets/inertia-DnazVp0g.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vite-dev/assets/application-DBfCPIOZ.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-8b441ae0.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/controllers/application-3affb389.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/controllers/hello_controller-708796bd.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/controllers/index-ee64e1f1.js"):
+  
+Started GET "/icon.png" for 127.0.0.1 at 2025-08-12 13:02:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application-bfcdf840.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/stimulus-loading-1fc53fe7.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/stimulus.min-4b1e420e.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/turbo.min-3a2e143f.js"):
+  
+Started GET "/icon.svg" for 127.0.0.1 at 2025-08-12 13:02:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/icon.svg"):
+  
+Started GET "/service-worker" for 127.0.0.1 at 2025-08-12 13:02:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker"):
+  
+Started GET "/newteam" for 127.0.0.1 at 2025-08-12 13:02:39 -0400
+Processing by TeamsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4096)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4444)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 6931)
+
+
+Started GET "/service-worker" for 127.0.0.1 at 2025-08-12 13:02:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker"):
+  

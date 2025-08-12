@@ -1,14 +1,15 @@
-describe App do
+require 'rails_helper'
 
+RSpec.describe 'Rails Forms Lab', type: :feature do
   describe 'GET /newteam' do
     it 'sends a 200 status code' do
-      get '/newteam'
-      expect(last_response.status).to eq(200)
+      visit '/newteam'
+      expect(page.status_code).to eq(200)
     end
 
     it 'renders basketball team form' do
       visit '/newteam'
-      expect(page).to have_selector("form")
+      expect(page).to have_selector('form')
       expect(page).to have_field(:name)
       expect(page).to have_field(:coach)
       expect(page).to have_field(:pg)
@@ -20,75 +21,73 @@ describe App do
   end
 
   describe 'POST /team' do
-    it 'does not return Sinatra error page' do
+    it 'does not return error page' do
       visit '/newteam'
 
-      click_button "Submit"
-      expect(page).to_not have_text("Backtrace")
+      click_button 'Submit'
+      expect(page).to_not have_text('Backtrace')
     end
 
-    it "displays the basketball team name in the browser" do
+    it 'displays the basketball team name in the browser' do
       visit '/newteam'
 
-      fill_in(:name, :with => "Bballers")
-      click_button "Submit"
-      expect(page).to have_text("Team Name: Bballers")
+      fill_in(:name, with: 'Bballers')
+      click_button 'Submit'
+      expect(page).to have_text('Team Name: Bballers')
     end
 
     it "displays the coach's name in the browser" do
       visit '/newteam'
 
-      fill_in(:coach, :with => "Walter")
-      click_button "Submit"
+      fill_in(:coach, with: 'Walter')
+      click_button 'Submit'
 
-      expect(page).to have_text("Coach: Walter")
+      expect(page).to have_text('Coach: Walter')
     end
 
     it "displays the point guard's name in the browser" do
       visit '/newteam'
 
-      fill_in(:pg, :with => "Jeff")
-      click_button "Submit"
+      fill_in(:pg, with: 'Jeff')
+      click_button 'Submit'
 
-      expect(page).to have_text("Point Guard: Jeff")
+      expect(page).to have_text('Point Guard: Jeff')
     end
 
     it "displays the shooting guard's name in the browser" do
       visit '/newteam'
 
-      fill_in(:sg, :with => "Ralph")
-      click_button "Submit"
+      fill_in(:sg, with: 'Ralph')
+      click_button 'Submit'
 
-      expect(page).to have_text("Shooting Guard: Ralph")
+      expect(page).to have_text('Shooting Guard: Ralph')
     end
 
     it "displays the power forward's name in the browser" do
       visit '/newteam'
 
-      fill_in(:pf, :with => "Danny")
-      click_button "Submit"
+      fill_in(:pf, with: 'Danny')
+      click_button 'Submit'
 
-      expect(page).to have_text("Power Forward: Danny")
+      expect(page).to have_text('Power Forward: Danny')
     end
 
-    it "displays the shooting gaurd's name in the browser" do
+    it "displays the small forward's name in the browser" do
       visit '/newteam'
 
-      fill_in(:sg, :with => "Joe")
-      click_button "Submit"
+      fill_in(:sf, with: 'Joe')
+      click_button 'Submit'
 
-      expect(page).to have_text("Shooting Guard: Joe")
+      expect(page).to have_text('Small Forward: Joe')
     end
 
     it "displays the center's name in the browser" do
       visit '/newteam'
 
-      fill_in(:c, :with => "Avi")
-      click_button "Submit"
+      fill_in(:c, with: 'Avi')
+      click_button 'Submit'
 
-      expect(page).to have_text("Center: Avi")
+      expect(page).to have_text('Center: Avi')
     end
-
-
   end
 end
