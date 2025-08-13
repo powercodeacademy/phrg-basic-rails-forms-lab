@@ -1,5 +1,13 @@
 class TeamsController < ApplicationController
-  # TODO: Add your controller actions here
-  # You'll need a 'new' action to display the form
-  # You'll need a 'create' action to process the form submission
+  def new; end
+
+  def create
+    @team = team_params
+  end
+
+  private
+
+  def team_params
+    params.permit(:name, :coach, :pg, :sg, :pf, :sf, :c)
+  end
 end

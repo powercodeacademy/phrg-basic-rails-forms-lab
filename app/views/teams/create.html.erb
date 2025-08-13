@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Basketball Team</title>
-  </head>
-  <body>
-    <!--
-      TODO: Display the team information here!
 
-      Your view should display:
-      - Team Name: [team name]
-      - Coach: [coach name]
-      - Point Guard: [pg name]
-      - Shooting Guard: [sg name]
-      - Power Forward: [pf name]
-      - Small Forward: [sf name]
-      - Center: [c name]
+<head>
+  <meta charset="UTF-8">
+  <title>Basketball Team</title>
+</head>
 
-      Use the data passed from your controller action.
-    -->
-  </body>
+<body>
+  <h1>Created Team</h1>
+  <ul>
+    <li>Team Name: <%= @team[:name] %> </li>
+    <li>Coach: <%= @team[:coach] %> </li>
+    <li>Point Guard: <%= @team[:pg] %> </li>
+    <li>Power Forward: <%= @team[:pf] %> </li>
+    <li>Small Forward: <%= @team[:sf] %> </li>
+    <li>Shooting Guard: <%= @team[:sg] %> </li>
+    <li>Center: <%= @team[:c] %> </li>
+  </ul>
+</body>
+
 </html>
