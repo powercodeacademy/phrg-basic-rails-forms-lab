@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Basketball Team Signup</title>
-  </head>
-  <body>
-    <!--
-      TODO: Create your form here!
 
-      Your form should:
-      - Use Rails form helpers
-      - Submit to '/team' with POST method
-      - Have fields for: name, coach, pg, sg, pf, sf, c
-      - Have a submit button with id="Submit"
+<head>
+  <meta charset="UTF-8">
+  <title>Basketball Team Signup</title>
+</head>
 
-      Hint: Use form_with helper
-    -->
-  </body>
+<body>
+  <h1>Team Creation Form</h1>
+  <%= form_with model: @team, local: true, url: '/team', method: :post do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :coach %>
+    <%= form.text_field :coach %>
+  </div>
+  <div>
+    <%= form.label :pg, "Point Guard" %>
+    <%= form.text_field :pg %>
+  </div>
+  <div>
+    <%= form.label :sg, "Shooting Guard" %>
+    <%= form.text_field :sg %>
+  </div>
+  <div>
+    <%= form.label :pf, "Power Forward" %>
+    <%= form.text_field :pf %>
+  </div>
+  <div>
+    <%= form.label :sf, "Small Forward" %>
+    <%= form.text_field :sf %>
+  </div>
+  <div>
+    <%= form.label :c, "Center" %>
+    <%= form.text_field :c %>
+  </div>
+  <%= form.submit id: "Submit" %>
+  <% end %>
+</body>
+
 </html>
