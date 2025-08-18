@@ -4,6 +4,6 @@ class TeamsController < ApplicationController
   end
 
   def create 
-    @team = Team.create(params.require(:team).permit(:name, :coach, :pg, :sg, :pf, :sf, :c))
+    @team = Team.create(params.permit(:name, :coach, :pg, :sg, :pf, :sf, :c))
   end
 end
