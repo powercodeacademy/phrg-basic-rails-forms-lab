@@ -5,16 +5,22 @@
     <title>Basketball Team Signup</title>
   </head>
   <body>
-    <!--
-      TODO: Create your form here!
-
-      Your form should:
-      - Use Rails form helpers
-      - Submit to '/team' with POST method
-      - Have fields for: name, coach, pg, sg, pf, sf, c
-      - Have a submit button with id="Submit"
-
-      Hint: Use form_with helper
-    -->
+    <%= form_with model: @team, local: true do |f| %>
+      <%= label_tag :name, "Team name:" %>
+      <%= text_field_tag :name %> 
+      <%= label_tag :coach, "Coach:" %>
+      <%= text_field_tag :coach %> 
+      <%= label_tag :pg, "Point Guard:" %>
+      <%= text_field_tag :pg %> 
+      <%= label_tag :sg, "Shooting Guard:" %>
+      <%= text_field_tag :sg %> 
+      <%= label_tag :pf, "Power Forward:" %>
+      <%= text_field_tag :pf %> 
+      <%= label_tag :sf, "Small Forward:" %>
+      <%= text_field_tag :sf %> 
+      <%= label_tag :c, "Center:" %>
+      <%= text_field_tag :c %> 
+      <%= submit_tag "Submit" %>
+    <% end %>
   </body>
 </html>
