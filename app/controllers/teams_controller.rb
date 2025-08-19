@@ -6,9 +6,9 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     if @team.save
-      render :create, notice: 'Team created successfully!'
+      render :new, notice: 'Team created successfully!'
     else
-      render :new
+      render :create
     end
   end
 

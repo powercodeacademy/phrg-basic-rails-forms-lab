@@ -22,7 +22,7 @@
 
     <div class="field">
       <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.text_field :name, id: "name" %>
       <% if @team.errors[:name].any? %>
       <span class="error"><%= @team.errors[:name].first %></span>
       <% end %>
@@ -30,7 +30,7 @@
 
     <div class="field">
       <%= form.label :coach %>
-      <%= form.text_field :coach %>
+      <%= form.text_field :coach, id: "coach" %>
       <% if @team.errors[:coach].any? %>
       <span class="error"><%= @team.errors[:coach].first %></span>
       <% end %>
@@ -38,7 +38,7 @@
 
     <div class="field">
       <%= form.label :pg %>
-      <%= form.text_field :pg %>
+      <%= form.text_field :pg, id: "pg" %>
       <% if @team.errors[:pg].any? %>
       <span class="error"><%= @team.errors[:pg].first %></span>
       <% end %>
@@ -46,7 +46,7 @@
 
     <div class="field">
       <%= form.label :sg %>
-      <%= form.text_field :sg %>
+      <%= form.text_field :sg, id: "sg" %>
       <% if @team.errors[:sg].any? %>
       <span class="error"><%= @team.errors[:sg].first %></span>
       <% end %>
@@ -54,7 +54,7 @@
 
     <div class="field">
       <%= form.label :pf %>
-      <%= form.text_field :pf %>
+      <%= form.text_field :pf, id: "pf" %>
       <% if @team.errors[:pf].any? %>
       <span class="error"><%= @team.errors[:pf].first %></span>
       <% end %>
@@ -62,7 +62,7 @@
 
     <div class="field">
       <%= form.label :sf %>
-      <%= form.text_field :sf %>
+      <%= form.text_field :sf, id: "sf" %>
       <% if @team.errors[:sf].any? %>
       <span class="error"><%= @team.errors[:sf].first %></span>
       <% end %>
@@ -70,14 +70,14 @@
 
     <div class="field">
       <%= form.label :c %>
-      <%= form.text_field :c %>
+      <%= form.text_field :c, id: "c" %>
       <% if @team.errors[:c].any? %>
       <span class="error"><%= @team.errors[:c].first %></span>
       <% end %>
     </div>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit "Submit" %>
     </div>
     <% end %>
   </body>
