@@ -19,5 +19,31 @@
 
       Use the data passed from your controller action.
     -->
+  <%= form_with url: "/teams", method: :post, local: true do |form| %>
+  
+  <%= form.label :team_name %>
+  <%= form.text_field :team_name %>
+
+  <%= form.label :coach %>
+  <%= form.text_field :coach %>
+
+   <%= form.label :pg_name %>
+  <%= form.text_field :pg_name %>
+
+   <%= form.label :sg_name %>
+  <%= form.text_field :sg_name %>
+
+   <%= form.label :sf_name %>
+  <%= form.text_field :sf_name %>
+
+   <%= form.label :pf_name %>
+  <%= form.text_field :pf_name %>
+
+   <%= form.label :c_name %>
+  <%= form.text_field :c_name %>
+
+  <%= form.submit "Add Team" %>
+<% end %>
+
   </body>
 </html>
