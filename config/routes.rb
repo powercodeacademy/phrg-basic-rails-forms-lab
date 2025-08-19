@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :teams, only: %i[new create]
+  get '/newteam', to: 'teams#new'
+  post '/teams', to: 'teams#create'
 end
