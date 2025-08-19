@@ -1,16 +1,12 @@
 class TeamsController < ApplicationController
-  def show
-    @team = Team.find(params[:id])
-  end
-
   def new
-    @team = Team.new(team_params)
+    @team = Team.new
   end
 
   def create
     @team = Team.new(team_params)
     if @team.save
-      redirect_to @team, notice: 'Team created successfully!'
+      redirect_to new_team_path, notice: 'Team created successfully!'
     else
       render :new
     end

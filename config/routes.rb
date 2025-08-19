@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :teams, only: %i[show new create]
+  resources :teams, only: %i[new create]
 end
