@@ -2,45 +2,46 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Basketball Team Signup</title>
+    <title>Create Team</title>
   </head>
   <body>
-    <h1>Basketball Team Signup</h1>
+
+    <h1>New Team</h1>
     
     <%= form_with url: '/team', method: :post, local: true do |form| %>
       <div>
         <%= form.label :name, "Team Name:" %>
-        <%= form.text_field :name %>
+        <%= form.text_field :name, name: 'team[name]' %>
       </div>
       
       <div>
         <%= form.label :coach, "Coach:" %>
-        <%= form.text_field :coach %>
+        <%= form.text_field :coach, name: 'team[coach]' %>
       </div>
       
       <div>
         <%= form.label :pg, "Point Guard:" %>
-        <%= form.text_field :pg %>
+        <%= form.text_field :pg, name: 'team[pg]' %>
       </div>
       
       <div>
         <%= form.label :sg, "Shooting Guard:" %>
-        <%= form.text_field :sg %>
+        <%= form.text_field :sg, name: 'team[sg]' %>
       </div>
       
       <div>
         <%= form.label :pf, "Power Forward:" %>
-        <%= form.text_field :pf %>
+        <%= form.text_field :pf, name: 'team[pf]' %>
       </div>
       
       <div>
         <%= form.label :sf, "Small Forward:" %>
-        <%= form.text_field :sf %>
+        <%= form.text_field :sf, name: 'team[sf]' %>
       </div>
       
       <div>
         <%= form.label :c, "Center:" %>
-        <%= form.text_field :c %>
+        <%= form.text_field :c, name: 'team[c]' %>
       </div>
       
       <%= form.submit "Submit", id: "Submit" %>
