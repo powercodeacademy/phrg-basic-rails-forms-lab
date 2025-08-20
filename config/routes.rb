@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # TODO: Add your routes here
-  # You need:
-  # - A GET route to '/newteam' that goes to the teams controller new action
-  # - A POST route to '/team' that goes to the teams controller create action
+  # You need to create RESTful routes for teams
+  # Hint: Use the resources method to create standard RESTful routes
+  # This will give you: new, create, show, index, edit, update, destroy
 end
