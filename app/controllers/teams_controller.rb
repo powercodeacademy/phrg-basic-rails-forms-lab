@@ -1,19 +1,10 @@
 class TeamsController < ApplicationController
   def new
-    @team = {}
+    @team = Team.new
   end
 
   def create
-    @team = {
-      name: params[:name],
-      coach: params[:coach],
-      pg: params[:pg],
-      sg: params[:sg],
-      pf: params[:pf],
-      sf: params[:sf],
-      c: params[:c]
-    }
-    render :show
+    @team = Team.create(team_params)
   end
 
   private
