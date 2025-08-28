@@ -22,19 +22,17 @@ Bundler.require(*Rails.groups)
 module PhrgBasicRailsFormsLab
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults 7.1
+
+    # Rails 7.1 cache format version
+    config.active_support.cache_format_version = 7.1
 
     # Configuration for the application, engines, and railties goes here.
-    #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
-    #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    # Only loads a smaller set of middleware suitable for API only apps.
-    # Middleware like session, flash, cookies can be added back manually.
-    # Skip views, helpers and assets when generating a new resource.
     config.api_only = false
   end
 end
